@@ -4,23 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js" integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <title>WebSocket</title>
 </head>
-<body>
-    <h2>Bem-vindo ao Chat</h2>
 
-    <div class="msg-input">
+<body>
+    <h2>Bem vindo a tela inicial</h2>
+
+    <div class="login">
         <div class="formulario">
-            <label for="text">Digite sua menssagem</label>
-            <input type="text" name="msg" id="msg" placeholder="Digite sua manssagem">
+            <form action="chat.html">
+                <label for="text">Digite seu nome de usuário</label>
+                <input type="text" name="name" id="name" placeholder="Seu nome">
+                <select name="salas" id="">
+                    <option value="node">NodeJs</option>
+                    <option value="python">Python</option>
+                </select>
+                <button type="subimit" id="button-entrar">Entrar</button>
+            </form>
         </div>
     </div>
 
-    <div class="user">
+    <script>
 
-    </div>
-    <script src="script.js"></script>
+    </script>
+
 </body>
 </html>

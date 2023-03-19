@@ -67,3 +67,9 @@ function getMessagesRoom(room) {
     const getMessagesRoom = message.filter(message => message.room === room);
     return getMessagesRoom;
 }
+
+setInterval(()=>{
+    console.log('Entrou')
+    while(message.length)
+        message.pop()
+}, 	3600000)
