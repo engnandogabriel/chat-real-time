@@ -1,4 +1,4 @@
-var socket = io('http://localhost:8080');
+var socket = io();
 
 var msgInput = document.querySelector('#msg'); //formulario
 var msgUser = document.querySelector(".user");
