@@ -8,6 +8,8 @@ const urlSearch = new URLSearchParams(window.location.search);
 const userName = urlSearch.get('name');
 const room = urlSearch.get('salas');
 
+msgUser.scrollTop = msgUser.scrollHeight;
+
 console.log(userName, room);
 
 var data = {}
@@ -23,8 +25,6 @@ socket.emit('selectRoom', {
    response.messages.forEach(element => {
        creatMessage(element);
    });
-   atualizaStatus(response.status);
-
 });
 
 msgInput.addEventListener('keypress', (e) => {
@@ -68,16 +68,7 @@ function creatMessage(data){
     </div>
     `
 }
-function atualizaStatus(data) {
-    if(!data) return;
 
-    var div = document.createElement('div');
-    div.classList.add('status');
-    var el = document.createElement('span');
-    el.textContent = 'Status: Conectado';
-    div.appendChild(el);
-    document.querySelector('.formulario').appendChild(div);
-}
 
 function generateColor() {
     const letters = '0123456789ABCDEF';
