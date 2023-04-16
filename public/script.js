@@ -7,6 +7,9 @@ var msgUser = document.querySelector(".user");
 const urlSearch = new URLSearchParams(window.location.search);
 const userName = urlSearch.get('name');
 const room = urlSearch.get('salas');
+const title = document.querySelector('.title');
+
+title.innerHTML = `<h2>Bem-Vindo ao Chat, ${userName}</h2>`
 
 msgUser.scrollTop = msgUser.scrollHeight;
 
